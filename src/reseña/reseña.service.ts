@@ -2,8 +2,8 @@ import { BadRequestException, Injectable, NotFoundException } from '@nestjs/comm
 import { InjectRepository } from '@nestjs/typeorm';
 import { ReseñaEntity } from './reseña.entity';
 import { Repository } from 'typeorm';
-import { ActividadEntity } from 'src/actividad/actividad.entity';
-import { EstudianteEntity } from 'src/estudiante/estudiante.entity';
+import { ActividadEntity } from '../actividad/actividad.entity';
+import { EstudianteEntity } from '../estudiante/estudiante.entity';
 
 @Injectable()
 export class ReseñaService {
