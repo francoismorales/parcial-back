@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "67f3527b-597d-4171-8fb4-272a83f25024",
+		"name": "Parcial Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29150372"
+	},
+	"item": [
+		{
+			"name": "Crear estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cedula\": 123456789,\r\n  \"nombre\": \"Pepito Pérez\",\r\n  \"correo\": \"pepito@email.com\",\r\n  \"programa\": \"Ingeniería de Sistemas\",\r\n  \"semestre\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar actividad por fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/actividades/fecha/2025-06-20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actividades",
+						"fecha",
+						"2025-06-20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear actividad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Feria Cultural Interactiva\",\r\n  \"fecha\": \"2025-06-20\",\r\n  \"cupoMaximo\": 50\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/actividades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actividades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambiar estado",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/actividades/5bfa361a-80e0-4dce-b415-01cc22274d1b/estado/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"actividades",
+						"5bfa361a-80e0-4dce-b415-01cc22274d1b",
+						"estado",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
